@@ -99,10 +99,10 @@ RD18 Los datos del préstamo (búsqueda para anular):
 
 RD19 Los datos de un préstamo (anular):
   - DNI(Una cadena de 9 caracteres no vacía cuyo último caracter en una letra)
-	- Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
-	- Número de secuencia (Un número entero mayor que 0)
-	- Fecha de inicio(Tipo de dato Date no vacío)
-	- Fecha de fin(Tipo de dato Date no vacío)
+  - Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
+  - Número de secuencia (Un número entero mayor que 0)
+  - Fecha de inicio(Tipo de dato Date no vacío)
+  - Fecha de fin(Tipo de dato Date no vacío)
 	
 	
 **Requisitos funcionales:**
@@ -204,17 +204,17 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 
 **Esquema de caja negra**
 
-![img](https://www.github.com/AEYB89/DDSI/Diagramas/Esquema_de_caja_negra.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquema_de_caja_negra.png)
 
 **Esquema F armazón (funcional)**
 
-![img](https://www.github.com/AEYB89/DDSI/Diagramas/Esquema_F_armazon.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquema_F_armazon.png)
 
 **Primer y único refinamiento**
 
-![img](https://www.github.com/AEYB89/DDSI/Diagramas/DFD_refinamiento.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/DFD_refinamiento.png)
 
-### Corrección de esquemas ### 
+### Corrección de esquemas 
 
 **Corrección de esquemas**
 
@@ -268,14 +268,14 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 
 **Esquemas externos**
 
-![img](https://www.github.com/AEYB89/DDSI/Diagramas/Esquemas_externos_DFD_0.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquemas_externos_DFD_0.png)
 
 **Esquema D armazón (conceptual)**
 
-![img](https://www.github.com/AEYB89/DDSI/Diagramas/Esquema_D_armazon.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquema_D_armazon.png)
 
 
-## Operaciones para el esquema F##
+## Operaciones para el esquema F ##
 
 Lista de operaciones:
 
@@ -288,7 +288,7 @@ Lista de operaciones:
 
 **Esquemas de operación y de navegación**
 
-![img]((https://www.github.com/AEYB89/DDSI/Diagramas/Esquemas_de_navegacion.png)
+![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquemas_de_navegacion.png)
 
 ## Diseño lógico relacional apartir del esquema D ##
 
@@ -326,10 +326,11 @@ Id_uni references Usuario(Id_uni),
 Fecha_inicio DATE NOT NULL,
 Fecha_fin DATE NOT NULL,
 primary key(DNI, Id_cat, Id_uni)
-);```
+);
+```
 
 
-## Disparador
+## Disparador ## 
 
 Disparador para no insertar el mismo DNI en la actualización de un usuario:
 
@@ -343,4 +344,5 @@ FOR EACH ROW
 WHEN(new.DNI == old.DNI) THEN
 BEGIN
 	RAISE_APPLICATION_ERROR(-20001, "El DNI que intenta introducir ya existe en el sistema");
-END;```
+END;
+```
