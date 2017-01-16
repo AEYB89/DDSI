@@ -3,7 +3,8 @@
 Por: **Adnane El Yaagoubi**
 
 ## Descripción ##
-Este sistema gestiona los préstamos de materiales deportivos de un polideportivo. Un usuario dado de alta podrá pedir prestado un material En caso de estar disponible(dado de alta y con un unidades disponibles). El alta un usuario se llevará a cabo almacenando en la base de datos su DNI, Nombre completo, dirección, teléfono y correo. Por su parte, el alta de un material se hará almacenando su identifición de la categoría a la que pertenece, identificación de la unidad, descripción y número de secuencia. En cuanto a los préstamos, se registrarán a partir de el DNI del usuario al cual se le presta el material, la identificación de la categoría a la cual pertenece el material, la identificación de la unidad, la fecha de inicio del préstamo y la fecha en que acaba. El sistema puede realizar consultas sobre los préstamos hechos a cada usuario.
+
+Este sistema gestiona los préstamos de materiales deportivos de un polideportivo. Un usuario dado de alta podrá pedir prestado un material en caso de estar disponible(dado de alta y con un unidades disponibles). El alta de un usuario se llevará a cabo almacenando en la base de datos su DNI, Nombre completo, dirección, teléfono y correo. Por su parte, el alta de un material se hará almacenando la identifición de la categoría a la que pertenece, identificación de la unidad, descripción y número de secuencia. En cuanto a los préstamos, se registrarán a partir del DNI del usuario al cual se le presta el material, la identificación de la categoría a la cual pertenece el material, la identificación de la unidad, la fecha de inicio del préstamo y la fecha en que acaba. El sistema puede realizar consultas sobre los préstamos hechos a cada usuario.
 
 ## Análisis de requisitos ##
 
@@ -15,23 +16,23 @@ RD1 Los datos de un usuario:
   - DNI(Una cadena de 9 caracteres no vacía cuyo último caracter en una letra)
   - Nombre completo(Una cadena de hasta 60 caracteres no vacía)
   - Dirección(Una cadena de hasta 390 caracteres)
-  - Télefono(Una cadena de hasta 20 caracteres numéricos en la que el primer caracter puede ser un signo +)
+  - Télefono(Una cadena de hasta 12 caracteres numéricos en la que el primer caracter puede ser un signo +)
   - Correo(Una cadena de hasta 20 caracteres no vacía)
 
 RD2 Los datos de un usuario almacenados:
   - DNI(Una cadena de 9 caracteres no vacía cuyo último caracter en una letra)
   - Nombre completo(Una cadena de hasta 60 caracteres no vacía)
   - Dirección(Una cadena de hasta 390 caracteres)
-  - Télefono(Una cadena de hasta 20 caracteres numéricos en la que el primer caracter puede ser un signo +)
+  - Télefono(Una cadena de hasta 12 caracteres numéricos en la que el primer caracter puede ser un signo +)
   - Correo(Una cadena de hasta 20 caracteres no vacía)
 	
 RD3 Los datos de las categorías de materiales:
   - Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
-  - Descripción(Una cadena de hasta 20 caracteres no vacía)
+  - Descripción(Una cadena de hasta 120 caracteres no vacía)
 	
 RD4 Los datos de las categorías de materiales almacenadas:
   - Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
-  - Descripción(Una cadena de hasta 20 caracteres no vacía)
+  - Descripción(Una cadena de hasta 120 caracteres no vacía)
 	
 RD5 Los datos de las unidades de categorías de materiales:
   - Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
@@ -68,7 +69,7 @@ RD11 Los datos de un usuario (baja):
   - DNI(Una cadena de 9 caracteres no vacía cuyo último caracter en una letra)
   - Nombre completo(Una cadena de hasta 60 caracteres no vacía)
   - Dirección(Una cadena de hasta 390 caracteres) 
-  - Télefono(Una cadena de hasta 20 caracteres numéricos en la que el primer caracter puede ser un signo +)
+  - Télefono(Una cadena de hasta 12 caracteres numéricos en la que el primer caracter puede ser un signo +)
   - Correo(Una cadena de hasta 20 caracteres no vacía)
 
 RD12 Los datos de las categorías de materiales (búsqueda):
@@ -76,7 +77,7 @@ RD12 Los datos de las categorías de materiales (búsqueda):
 
 RD13 Los datos de las categorías de materiales (baja):
   - Identificador(Una cadena de 3 caracteres no vacía cuyo último caracter es un número)
-  - Descripción(Una cadena de hasta 20 caracteres no vacía)
+  - Descripción(Una cadena de hasta 120 caracteres no vacía)
 	
 RD14 Los datos de las unidades de categorías de materiales (búsqueda):
   - Número de secuencia (Un número entero mayor que 0)
@@ -310,8 +311,8 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 
 create table Usuario(
 DNI VARCHAR(9) NOT NULL primary key,
-Nombre_completo VARCHAR(30) NOT NULL,
-Direccion VARCHAR(40) NOT NULL,
+Nombre_completo VARCHAR(60) NOT NULL,
+Direccion VARCHAR(390) NOT NULL,
 Telefono VARCHAR(12) NOT NULL,
 Correo VARCHAR(20) NOT NULL
 );

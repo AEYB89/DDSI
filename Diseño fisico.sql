@@ -2,8 +2,8 @@
 
 create table Usuario(
 DNI VARCHAR(9) NOT NULL primary key,
-Nombre_completo VARCHAR(30) NOT NULL,
-Direccion VARCHAR(40) NOT NULL,
+Nombre_completo VARCHAR(60) NOT NULL,
+Direccion VARCHAR(390) NOT NULL,
 Telefono VARCHAR(12) NOT NULL,
 Correo VARCHAR(20) NOT NULL
 );
@@ -12,7 +12,7 @@ create table Material(
 Id_cat VARCHAR(3) NOT NULL,
 Id_uni VARCHAR(3) NOT NULL,
 Descripcion VARCHAR(120) NOT NULL,
-Num_sec NUMBER(3) NOT NULL AUTOMATIC INCREMENT,
+Num_sec NUMBER(3) NOT NULL AUTO_INCREMENT,
 primary key(Id_cat, Id_uni)
 );
 
