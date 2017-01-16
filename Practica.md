@@ -330,7 +330,7 @@ primary key(DNI, Id_cat, Id_uni)
 ```
 
 
-## Disparador ## 
+## Disparador  
 
 Disparador para no insertar el mismo DNI en la actualización de un usuario:
 
