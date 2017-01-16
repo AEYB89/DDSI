@@ -150,7 +150,7 @@ RF9 Anular un préstamo: Función que elimina un préstamo del sistema.
 	
 **Requisitos semánticos:**
 
-RS1 Para dar de alta un usuario no debe haber sido dado de alta anteriormente. Afecta a:
+RS1 Para dar de alta a un usuario no debe haber sido dado de alta anteriormente. Afecta a:
   - RF1
 	
 RS2 Para dar de alta una categoría de materiales no debe haber sido dada de alta anteriormente. Afecta a:
@@ -159,7 +159,7 @@ RS2 Para dar de alta una categoría de materiales no debe haber sido dada de alta
 RS3 Para dar de alta una unidad de material no debe haber sido dada de alta anteriormente. Afecta a:
   - RF3
 	
-RS4 Para dar de baja un usuario debe haber sido dado de alta anteriormente. Afecta a:
+RS4 Para dar de baja a un usuario debe haber sido dado de alta anteriormente. Afecta a:
   - RF4
 	
 RS5 Para dar de baja una categoría de materiales debe haber sido dada de alta anteriormente. Afecta a:
@@ -202,7 +202,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 |  RD19  |  	   |   RF9  |        |
 
 
-## Diseño (análisis de datos y funciones orentado a las funciones) ##
+## Diseño (análisis conjunto de datos y funciones orientado a las funciones) ##
 
 **Esquema de caja negra**
 
@@ -296,7 +296,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 
 ![img](https://github.com/AEYB89/DDSI/blob/master/Diagramas/Esquemas_de_navegacion.png)
 
-## Diseño lógico relacional apartir del esquema D ##
+## Diseño lógico relacional a partir del esquema D ##
 
 **Tablas:**
 
