@@ -3,11 +3,12 @@
 Por: **Adnane El Yaagoubi**
 
 ## Descripción ##
-Este sistema gestiona los préstamos de materiales deportivos de un polideportivo. Un usuario dado de alta podrá pedir prestado un material En caso de estar disponible(dado de alta y con un unidades disponibles). El alta un usuario se llevará a cabo almacenando en la base de datos su DNI, Nombre completo, dirección, teléfono y correo. Por su parte, el alta de un material se hará almacenando su identifición de la categoría a la que pertenece, identificación de la unidad, descripción y número de secuencia. En cuanto a los préstamos, se registrarán a partir de el DNI del usuario al cual se le presta el material,  la identificación de la categoría a la cual pertenece el material, la identificación de la unidad, la fecha de inicio del préstamo y la fecha en que acaba. El sistema puede realizar consultas sobre los préstamos hechos a cada usuario.
+Este sistema gestiona los préstamos de materiales deportivos de un polideportivo. Un usuario dado de alta podrá pedir prestado un material En caso de estar disponible(dado de alta y con un unidades disponibles). El alta un usuario se llevará a cabo almacenando en la base de datos su DNI, Nombre completo, dirección, teléfono y correo. Por su parte, el alta de un material se hará almacenando su identifición de la categoría a la que pertenece, identificación de la unidad, descripción y número de secuencia. En cuanto a los préstamos, se registrarán a partir de el DNI del usuario al cual se le presta el material, la identificación de la categoría a la cual pertenece el material, la identificación de la unidad, la fecha de inicio del préstamo y la fecha en que acaba. El sistema puede realizar consultas sobre los préstamos hechos a cada usuario.
 
 ## Análisis de requisitos ##
 
-### Análisis de requisitos. ###
+### Análisis de requisitos: ###
+
 **Requisitos de datos:**
 
 RD1 Los datos de un usuario:
@@ -200,7 +201,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 |  RD19  |  	   |   RF9  |        |
 
 
-## Diseño (análisis de datos y funcionalidades) ##
+## Diseño (análisis de datos y funciones orentado a las funciones) ##
 
 **Esquema de caja negra**
 
@@ -217,6 +218,8 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 ### Corrección de esquemas 
 
 **Corrección de esquemas**
+
+- Ubicación de los requisitos de datos en los esquemas F y D:
 
 |**RD**|         **Elemento DFD**        |    **Elemento E/R**    |
 |:----:|:-------------------------------:|:----------------------:|
@@ -240,6 +243,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 |RD18|     Proceso: Gestión de préstamos |    Relación: Presta    |
 |RD19|     Proceso: Gestión de préstamos |    Relación: Presta    |
 
+- Ubicación de los requisitos funcionales en el esquema F:
 
 |**RF**|        **Elemento DFD**         |
 |:--:|:---------------------------------:|
@@ -253,6 +257,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 |RF8 |	  Proceso: Gestión de préstamos  |
 |RF9 |	  Proceso: Gestión de préstamos  |
 
+- Ubicación de los requisitos semánticos en los esquemas F y D:
 
 |**RS**|           **Elemento DFD**          |     **Elemento E/R**   |
 |:----:|:-------------------------------:|:----------------------:|
@@ -277,7 +282,7 @@ RS9 Para anular un préstamo, debe haberse realizado anteriormente. Afecta a:
 
 ## Operaciones para el esquema F ##
 
-Lista de operaciones:
+**Lista de operaciones:**
 
 - O1: Insertar un nuevo usuario a partir de su DNI, nombre completo, dirección, teléfono y correo.
 - O2: Insertar un nuevo material a partir de su categoría, unidad, descripción y número de secuencia.
